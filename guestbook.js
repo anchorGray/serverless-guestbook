@@ -7,7 +7,7 @@ const guestbook = {
   get() {
     return $.ajax({
       type: 'GET',
-      url: `${apiUrl}/read_guestbook_entries_sequence`,
+      url: `${apiUrl}/read_guestbook_entries_sequence.json`,
       dataType: 'json'
     });
   },
@@ -16,7 +16,7 @@ const guestbook = {
     console.log('Sending', name, email, comment)
     return $.ajax({
       type: 'PUT',
-      url: `${apiUrl}/save_guestbook_entry_sequence`,
+      url: `${apiUrl}/save_guestbook_entry_sequence.json`,
       contentType: 'application/json; charset=utf-8',
       data: JSON.stringify({
         name,
